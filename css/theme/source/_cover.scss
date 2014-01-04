@@ -1,0 +1,18 @@
+.cover {
+    .cover-img {
+        display:block;
+        height: 250px;
+        margin:20px auto;
+    }
+    .given {
+        margin: 0;
+    }
+    .given-at{
+        float:left;
+        &:before { content: $location }
+    }
+    .given-on {
+        float:right;
+        &:before { content: $date }
+    }
+}

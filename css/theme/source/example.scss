@@ -1,0 +1,57 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Sample theme, by Julien Muetton (@themouette), licensed as Beerware.
+ * Adapted from default theme, Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../../reveal.js/css/theme/template/settings";
+@import "../../../reveal.js/css/theme/template/mixins";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../reveal.js/lib/font/league_gothic-webfont.eot');
+	src: url('../../reveal.js/lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../reveal.js/lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../reveal.js/lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../reveal.js/lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #A7A9AC;
+$headingColor: #00A2E0;
+$backgroundColor: #fafafa;
+$linkColor: #FC7022;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$headingTextShadow: -2px 4px 0 rgba(0,0,0,0.3), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$heading1TextShadow: $headingTextShadow;
+
+// This is the location displayed on the cover page.
+$location: "Fill location sass file";
+$date: "Fill date in sass file";
+
+// Background generator
+@mixin bodyBackground() {
+    background: $backgroundColor;
+	//@include radial-gradient( #e5e5e7, rgba(255,255,255,1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../../../reveal.js/css/theme/template/theme";
+@import "cover";
+// ---------------------------------------------
