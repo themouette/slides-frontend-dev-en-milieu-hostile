@@ -20,8 +20,8 @@
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-        <% for (var i=0, l=options.styles ; i<l ; i++) { %>
-        <script src="<%= options.styles[i] %>"></script>
+        <% for (var i=0, l=options.styles.length ; i<l ; i++) { %>
+        <link rel="stylesheet" href="<%= options.styles[i] %>" />
         <% } %>
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -73,7 +73,7 @@
         <script src="reveal.js/lib/js/head.min.js"></script>
         <script src="reveal.js/js/reveal.min.js"></script>
 
-        <% for (var i=0, l=options.scripts ; i<l ; i++) { %>
+        <% for (var i=0, l=options.scripts.length ; i<l ; i++) { %>
         <script src="<%= options.scripts[i] %>"></script>
         <% } %>
 
