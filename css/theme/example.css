@@ -132,18 +132,3 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #fc7022; }
-
-.cover .cover-img {
-  display: block;
-  height: 250px;
-  margin: 20px auto; }
-.cover .given {
-  margin: 0; }
-.cover .given-at {
-  float: left; }
-  .cover .given-at:before {
-    content: "Fill location sass file"; }
-.cover .given-on {
-  float: right; }
-  .cover .given-on:before {
-    content: "Fill date in sass file"; }
