@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             // Slides source glob pattern.
             'config.src.slides');
 
-        var sectionAttributes = 'data-separator="^\\n\\*\\*\\**\\n$" data-vertical="^\\n---+\\n$" data-notes="^Note:" data-charset="utf-8"';
+        var sectionAttributes = 'data-separator="^\\n---+\\n---+\\n$" data-vertical="^\\n---+\\n$" data-notes="^Note:" data-charset="utf-8"';
         var sectionTpl = options.expand
             ? '<section data-markdown <%= section_attributes %>><script type="text/template">\n<% print(grunt.file.read(filepath)) %>\n</script></section>'
             : '<section data-markdown="<%= filepath %>" <%= section_attributes %>></section>';

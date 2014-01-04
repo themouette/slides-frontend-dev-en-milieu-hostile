@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 // directory where revealjs is installed.
                 reveal: 'reveal.js',
                 // pattern that matches slides.
-                slides: 'src/*.markdown'
+                slides: 'src/**/*.markdown'
             },
             // Themes related configuration.
             // All following options are used to auto-detect and generate themes.
