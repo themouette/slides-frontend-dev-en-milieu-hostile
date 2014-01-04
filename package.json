@@ -1,0 +1,35 @@
+{
+  "name": "slides-bootstrap",
+  "version": "0.0.0",
+  "description": "Slides bootstrap",
+  "main": "index.js",
+  "directories": { },
+  "scripts": {
+    "start": "./node_modules/grunt-cli/bin/grunt dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themouette/slides-bootstrap.git"
+  },
+  "author": {
+    "name": "Julien Muetton",
+    "email": "julien@muetton.me",
+    "url": "http://muetton.me"
+  },
+  "license": "CC-BY-4.0",
+  "readmeFilename": "README",
+  "dependencies": {
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": ">=0.3.*",
+    "grunt-contrib-cssmin": ">=0.7.0",
+    "grunt-contrib-watch": ">=0.5.3",
+    "grunt-concurrent": ">=0.4.2",
+    "grunt-sass": ">=0.8.1",
+    "grunt-cli": ">=0.1.9",
+    "grunt": "0.4.x",
+    "lodash": "*"
+  }
+}
