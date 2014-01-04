@@ -1,0 +1,18 @@
+// Include this file in your scss if you activate font awesome.
+//
+// ``` sass
+// @import fontawesome
+// ```
+//
+// In your gruntfile, add `styles: [ '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' ],`
+// to include fontawesome from CDN.
+//
+// This fix is taken from https://github.com/hakimel/reveal.js/issues/601#issuecomment-31090224
+.reveal i.fa{
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-size: 100%;
+
+    &.small { font-size: 0.7em; }
+    &.big { font-size: 2em; }
+}
