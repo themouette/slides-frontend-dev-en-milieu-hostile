@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('index', 'Generate index file from markdown.', function () {
 
         var options = this.options({
-            expand: false,
+            expand: true,
             theme: 'default',
             template: './index.tpl',
             // An array of extra scripts to include.
@@ -22,13 +22,21 @@ module.exports = function (grunt) {
             // social websites
             twitter: null
         });
+        var expand;
+        if (typeof this.flags.expand !== 'undefined') {
+            expand = this.flags.expand;
+        } else if(this.flags.noexpand) {
+            expand = false;
+        } else {
+            expand = options.expand;
+        }
 
         grunt.config.requires(
             // Slides source glob pattern.
             'config.src.slides');
 
         var sectionAttributes = 'data-separator="^\\n---+\\n---+\\n$" data-vertical="^\\n---+\\n$" data-notes="^Note:" data-charset="utf-8"';
-        var sectionTpl = options.expand
+        var sectionTpl = expand
             ? '<section data-markdown <%= section_attributes %>><script type="text/template">\n<% print(grunt.file.read(filepath)) %>\n</script></section>'
             : '<section data-markdown="<%= filepath %>" <%= section_attributes %>></section>';
 
@@ -77,12 +85,7 @@ module.exports = function (grunt) {
 
     _.merge(grunt.config.data, {
         index: {
-            dev: {
-                options: { expand: false },
-                files: [{src: '<%= config.src.slides %>', dest: 'index-dev.html'}]
-            },
-            release: {
-                options: { expand: true },
+            all: {
                 files: [{src: '<%= config.src.slides %>', dest: 'index.html'}]
             }
         },
@@ -93,4 +96,7 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    grunt.registerTask( 'index:dev', [ 'index:*:noexpand' ] );
+    grunt.registerTask( 'index:release', [ 'index:*:expand' ] );
 };
