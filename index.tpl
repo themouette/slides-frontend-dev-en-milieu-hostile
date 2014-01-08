@@ -121,7 +121,7 @@
                 });
             }
 
-            initRunnables();
+            setTimeout(initRunnables, 1000);
 
         </script>
 
