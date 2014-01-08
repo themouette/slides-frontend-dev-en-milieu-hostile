@@ -105,24 +105,6 @@
                 ]
             });
 
-            function initRunnables() {
-                var runables = document.querySelectorAll('code.runable');
-                runables = Array.prototype.slice.call(runables);
-                runables.forEach(function (runable) {
-                    var pre = runable.parentElement;
-                    var btn = document.createElement('button');
-                    btn.innerHTML = 'Run';
-                    btn.className = 'runable-run';
-                    btn.addEventListener('click', function onRunnableClick(e) {
-                        eval(runable.innerHTML.replace(/<[^>]*>/g, ""));
-                        btn.blur();
-                    });
-                    pre.appendChild(btn);
-                });
-            }
-
-            setTimeout(initRunnables, 1000);
-
         </script>
 
     </body>
