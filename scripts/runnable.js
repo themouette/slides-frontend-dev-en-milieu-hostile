@@ -15,7 +15,7 @@ function initRunnables() {
         btn.innerHTML = 'Run';
         btn.className = 'runnable-run';
         btn.addEventListener('click', function onRunnableClick(e) {
-            var result = eval(runnable.innerHTML.replace(/<[^>]*>/g, ""));
+            var result = eval(runnable.innerHTML.replace(/<[^>]*>/g, "").replace(/&amp;/g, '&'));
             outputResult(runnable, result);
             btn.blur();
         });
