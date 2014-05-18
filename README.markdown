@@ -8,8 +8,8 @@ Clone it and replace origin with your repository.
 
 ``` sh
 $ PRESENTATION_NAME="your-presentation"
-$ git clone https://github.com/themouette/slites-template $PRESENTATION_NAME
-$ cd PRESENTATION_NAME
+$ git clone https://github.com/themouette/slides-bootstrap.git $PRESENTATION_NAME
+$ cd $PRESENTATION_NAME
 $ git remote origin set-url git@github.com:you/${PRESENTATION_NAME}.git
 ```
 
