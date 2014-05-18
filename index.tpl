@@ -60,8 +60,8 @@
                     </small>
                     </p>
                     <p class="given">
-                        <small class="given-at"></small>
-                        <small class="given-on"></small>
+                        <small id="presentation-location"></small>
+                        <small id="presentation-date"></small>
                     </p>
                 </section>
 
