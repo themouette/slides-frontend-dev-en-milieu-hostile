@@ -10,7 +10,7 @@ Clone it and replace origin with your repository.
 $ PRESENTATION_NAME="your-presentation"
 $ git clone https://github.com/themouette/slides-bootstrap.git $PRESENTATION_NAME
 $ cd $PRESENTATION_NAME
-$ git remote origin set-url git@github.com:you/${PRESENTATION_NAME}.git
+$ git remote set-url origin git@github.com:you/${PRESENTATION_NAME}.git
 ```
 
 Build
