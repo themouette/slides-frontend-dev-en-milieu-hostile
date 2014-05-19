@@ -65,7 +65,14 @@ All possible options are documented there.
 Credits
 -------
 
-Images provides from [pixabay.com](http://pixabay.com/).
+Images provided by [pixabay.com](http://pixabay.com/).
+
+Troll image base comes from
+[venturebeat.com](http://venturebeat.com/2012/06/04/lodsys-joins-google-apple-lodsys-patent-fights/)
+
+Eclispe logo provided by eclipse.org
+
+Subversion logo provided by http://subversion.apache.org/
 
 License
 -------
