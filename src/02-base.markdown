@@ -5,53 +5,76 @@ Vis ma vie de front
 
 ---
 
-## Le workflow
+## Cross browser
 
-* tests unitaires pour le métier
-* reload pour le visuel
-
-> Le retour doit être rapide, tomcat c'est trop long.
->
-> proxy NodeJs
+* 1331 specifications (source [W3C](http://www.w3.org/TR/#w3c_all))
+* multiples implémentations
+* multiples systèmes et formats (appareils)
 
 ---
 
-## Un proxy en prod
+## Note sur le réseau
 
-* Nb de requêtes parallèles dans le navigateur
-* CDN (gestion du cache)
-* utiliser les ressources du serveur d'application pour l'application
+* mobile: 57% d'abandon après 3 secondes (source : [strangeloop](http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/website-abandonment-happens-after-3-seconds/))
+* Amazon: 1% revenue increase for every 100ms of improvement (source :
+[Amazon](https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt))
 
-> Attention à bien tenir compte du proxy dans les générations d'URL (redirect,
-> liens...)
+<p class="alert tip fragment">Il est indispensable d'optimiser ses fichiers statiques</p>
+
+---
+
+## contraintes du navigateur
+
+* 5 requêtes en // par domaine
+* Chargement du JS bloquant
+* reflow
+* latence réseau
 
 ---
 
 ## Javascript
 
-* 1 seul fichier car le chargement est bloquant
+* 1 seul fichier
 * En bas de page pour que la page s'affiche vite
 
 ---
 
 ## CSS, images
 
-* use cache
 * Load CSS early to avoid reflow
+* use cache
 
 ---
 
-## Réseau
+## Le workflow
 
-* mobile
-* compress assets
-* Amazon: 1% revenue increase for every 100ms of improvement (source:
-[Amazon](https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt))
+* tests unitaires pour le métier
+* reload pour le visuel
+
+<img class="fragment" src="images/02/eclipse_progress.gif" />
+
+<p class="alert warn fragment">
+Le retour doit être rapide, attendre que les fichiers soient republiés n'est pas
+une option.
+</p>
 
 ---
 
-## Cross browser
+## Derrière un proxy en dévloppement
 
-* 1331 specifications (source [W3C](http://www.w3.org/TR/#w3c_all))
-* multiples implémentations
-* multiples systèmes et formats (appareils)
+<p class="alert info">
+Utiliser un proxy NodeJs en développement est simple et efficace.
+</p>
+
+<p class="alert warn fragment">Attention à bien tenir compte du proxy dans les générations d'URL (redirect, liens...)</p>
+
+---
+
+## Un CDN en production
+
+* distribué
+* autre domaine
+* gestion du cache
+* utiliser les ressources du serveur d'application pour l'application
+
+<p class="alert warn fragment">Attention au chemin des assets dans le html.</p>
