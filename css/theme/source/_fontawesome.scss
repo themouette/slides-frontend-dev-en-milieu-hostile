@@ -16,3 +16,110 @@
     &.small { font-size: 0.7em; }
     &.big { font-size: 2em; }
 }
+
+// Combine one of the following classes with an icon class.
+//
+// * `icon-text`: display an inline icon in the text flow:
+//  `<span class="icon-text error"></span>`
+// * `alert`: display a box with an inline icon.
+//  `<p class="alert error">This is an error message</p>`
+//
+// Following modifying classes are available:
+//
+// * error
+// * warn, warning
+// * info, tip, information
+// * fail
+// * success
+// * doc
+// * article, link
+.reveal {
+    // this is a simple base class for inline fontawsome icon.
+    // This should not be used directly.
+    .icon-text {
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        &:before {
+            font-family: 'FontAwesome';
+            margin-right: 10px;
+        }
+    }
+    // this is the base class for an alert box with a fontawesome icon
+    // prefix.
+    .alert {
+        padding: 15px;
+        margin: 20px 0;
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        &:before {
+            font-family: 'FontAwesome';
+            margin-right: 10px;
+            float: left;
+        }
+    }
+}
+
+.reveal {
+    .error {
+        &:before {
+            // .fa-times-circle
+            content: "\f057";
+        }
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    .fail {
+        &:before {
+            // .fa-thumbs-down
+            content: "\f165";
+        }
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+
+    .warn, .warning {
+        &:before {
+            // .fa-exclamation-triangle
+            content: "\f071";
+        }
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+
+    .success {
+        &:before {
+            // .fa-check
+            content: "\f00c";
+        }
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+
+    .info, .tip, .information {
+        &:before {
+            // .fa-info-circle
+            content: "\f05a";
+        }
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+    .doc {
+        &:before {
+            // .fa-book
+            content: "\f02d";
+        }
+    }
+    .article, .link {
+        &:before {
+            // .fa-link
+            content: "\f0c1";
+        }
+    }
+}
