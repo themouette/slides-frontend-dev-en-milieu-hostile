@@ -62,6 +62,11 @@ $date: '2014 January, 2nd'
 It is also possible to configure some behavior in `Gruntfile.js`.
 All possible options are documented there.
 
+Credits
+-------
+
+Images provides from [pixabay.com](http://pixabay.com/).
+
 License
 -------
 
