@@ -30,3 +30,16 @@
         content: $date;
     }
 }
+
+.no-title h1,
+.no-title h2,
+.no-title h3,
+.no-title h4,
+.no-title h5,
+.no-title h6 {
+    display: none;
+}
+
+.no-content * {
+    display: none;
+}
