@@ -3,21 +3,7 @@
 Environnement
 =============
 
----
-
-## Yeoman
-
-* generators / scaffolding
-
-``` sh
-$ npm install -g yeoman
-$ npm install -g generator-webapp
-$ yo webapp
-```
-
----
-
-## Use command line, not IDE
+Note: un éditeur et la ligne de commande
 
 ---
 
@@ -30,6 +16,27 @@ $ yo webapp
     href="http://venturebeat.com/2012/06/04/lodsys-joins-google-apple-lodsys-patent-fights/">
     venturebeat.com
 </a>
+
+---
+
+## Éditeurs
+
+* [Vim](http://www.vim.org/)
+* [Sublime Text](http://www.sublimetext.com/)
+* [Backets](http://brackets.io/)
+* [ATOM](https://atom.io/)
+
+---
+
+## Yeoman
+
+* generators / scaffolding
+
+``` sh
+$ npm install -g yeoman
+$ npm install -g generator-webapp
+$ yo webapp
+```
 
 ---
 
