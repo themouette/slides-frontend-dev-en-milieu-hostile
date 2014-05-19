@@ -32,7 +32,7 @@ body {
   color: #657b83; }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #d33682;
   text-shadow: none; }
 
@@ -69,7 +69,7 @@ body {
   border: none; }
 
 .reveal .roll span:after {
-  color: white;
+  color: #fff;
   background: #1a6291; }
 
 /*********************************************
