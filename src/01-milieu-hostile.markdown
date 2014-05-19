@@ -21,6 +21,4 @@
 ## Dans Eclipse
 
 
-Notes:
-
-Un IDE est un milieu hostile pour un frontend dev.
+Note: Un IDE est un milieu hostile pour un frontend dev.
