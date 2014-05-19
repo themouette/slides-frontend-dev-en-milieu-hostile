@@ -1,5 +1,4 @@
-<!--  data-background="images/02/strip-tease.jpg" data-background-size="auto auto" data-background-position="top left" data-background-color="#C6247A" -->
-<!-- .slide: data-background="http://www.lemag-vip.com/memo/c-ma-vie-logo.jpg" data-background-size="auto auto" -->
+<!-- .slide: data-background="images/02/strip-tease.png" data-background-size="auto auto" class="no-title" -->
 
 Vis ma vie de front
 ===================
@@ -11,7 +10,7 @@ Vis ma vie de front
 * tests unitaires pour le métier
 * reload pour le visuel
 
-> Le retour doit être rapide, tomcat c'est top, long.
+> Le retour doit être rapide, tomcat c'est trop long.
 >
 > proxy NodeJs
 
