@@ -1,4 +1,4 @@
-<!-- .slide: data-background="http://image.agora-hd.com/caps/__moyenne/lestempsmodernes/lestempsmodernes012.jpg" data-background-size="100% auto" -->
+<!-- .slide: data-background="images/04/unit_tests.jpg" data-background-size="100% auto" -->
 
 Tests unitaires
 ===============
