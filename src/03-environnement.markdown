@@ -1,4 +1,4 @@
-<!-- .slide: data-background="images/03/environnement.jpg" data-background-size="100% auto" -->
+<!-- .slide: data-background="images/03/environnement.jpg" data-background-size="100% auto" class="no-title" -->
 
 Environnement
 =============
@@ -7,15 +7,9 @@ Note: un éditeur et la ligne de commande
 
 ---
 
-<!-- .slide: data-background="images/03/troll-windows.jpg" data-background-size="auto 100%" -->
+<!-- .slide: data-background="images/03/troll-windows.jpg" data-background-size="auto 100%" class="no-title" -->
 
-<img class="troll" src="images/03/windows-commandline.jpg" />
-
-<a
-    class="image-credits"
-    href="http://venturebeat.com/2012/06/04/lodsys-joins-google-apple-lodsys-patent-fights/">
-    venturebeat.com
-</a>
+## Ligne de commande sous windows
 
 ---
 
@@ -27,6 +21,8 @@ Note: un éditeur et la ligne de commande
 * [ATOM](https://atom.io/)
 
 ---
+
+<!-- .slide: data-background-image="images/03/yo-logo.png" data-background-size="auto 70%" data-background-position="right center" -->
 
 ## Yeoman
 
@@ -40,6 +36,8 @@ $ yo webapp
 
 ---
 
+<!-- .slide: data-background-image="images/03/npm-logo.png" data-background-size="auto 30%" data-background-position="center 10%" class="no-title" -->
+
 ## npm
 
 package.json
@@ -48,9 +46,11 @@ package.json
 $ npm install
 ```
 
-Doit rappeler maven :)
+Note: Doit rappeler maven :)
 
 ---
+
+<!-- .slide: data-background-image="images/03/bower-logo.png" data-background-size="auto 70%" data-background-position="left center" -->
 
 ## bower
 
@@ -65,17 +65,13 @@ $ bower install
 
 ---
 
-<!-- .slide: data-background="images/03/troll-svn.jpg" data-background-size="auto 100%" -->
+<!-- .slide: data-background="images/03/troll-svn.jpg" data-background-size="auto 100%" class="no-title" -->
 
-<img class="troll" src="images/03/logo-svn.png" />
-
-<a
-    class="image-credits"
-    href="http://venturebeat.com/2012/06/04/lodsys-joins-google-apple-lodsys-patent-fights/">
-    venturebeat.com
-</a>
+## SVN
 
 ---
+
+<!-- .slide: data-background-image="images/03/grunt-logo.png" data-background-size="auto 70%" data-background-position="left center" -->
 
 ## grunt
 
@@ -86,7 +82,23 @@ $ grunt --help
 $ grunt default
 ```
 
-> ANT configuré en JSON
+<p class="alert info fragment">ANT configuré en JSON</p>
+
+---
+
+<!-- .slide: data-background-image="images/03/grunt-logo.png" data-background-size="auto 70%" data-background-position="left center" -->
+
+## Démarrer avec Grunt
+
+* [Getting started](http://gruntjs.com/getting-started)
+* [Your first GruntJS plugin](http://javascriptplayground.com/blog/2014/01/creating-your-first-grunt-plugin/)
+
+---
+
+<!-- .slide: data-background-image="images/03/grunt-logo.png" data-background-size="auto 70%" data-background-position="left center" -->
+
+## Gruntfile.js
+
 
 ---
 
