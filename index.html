@@ -61,13 +61,482 @@
                     </p>
                 </section>
 
-                <section data-markdown="src/01-milieu-hostile.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/02-base.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/03-environnement.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/04-tests-unitaires.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/05-tests-fonctionnels.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/06-integration-process.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
-<section data-markdown="src/07-finish.markdown" data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"></section>
+                <section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+## Define: Font End Developer
+
+Note: &lt;h2&gt;Qui est-il ?&lt;/h2&gt;
+**Introduire milieu hostile**
+&lt;p&gt;Cf &lt;a href=&quot;http://www.theguardian.com/help/insideguardian/2009/sep/28/blogpost&quot;&gt;inside theguardian post &lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vit dans le navigateur (Markup, style, accessibility, javascript);&lt;/li&gt;
+&lt;li&gt;porte des Converse&lt;/li&gt;
+&lt;/ul&gt;
+
+
+---
+
+## Define: Milieu hostile
+
+Note: Le mieux c&#x27;est de prendre des exemples.
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/01/desert.jpg&quot; data-background-size=&quot;100% auto&quot; class=&quot;no-content&quot; --&gt;
+
+Note: &lt;h2&gt;Dans le désert&lt;/h2&gt;
+
+* Attention au sable ;
+* Beaucoup boire.
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/01/jungle.jpg&quot; data-background-size=&quot;100% auto&quot; class=&quot;no-content&quot; --&gt;
+
+Note: &lt;h2&gt;Dans la jungle&lt;/h2&gt;
+
+* Attention à l&#x27;humidité ;
+* Attention aux animaux sauvages.
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/01/troll-eclipse.jpg&quot; data-background-size=&quot;auto 100%&quot; class=&quot;no-content&quot; --&gt;
+
+Note: &lt;h2&gt;Dans Eclipse&lt;/h2&gt;
+
+Pour celui ci je n&#x27;ai pas encore trouvé.
+
+Il représente un écosystème, ses outils, méthodes et processus.
+
+Comme tous les IDE, c&#x27;est un milieu hostile pour un front end dev.
+
+Il faut faire cohabiter les deux écosystèmes.
+
+On va voir pourquoi
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+&lt;!-- .slide: data-background=&quot;images/02/strip-tease.png&quot; data-background-size=&quot;auto auto&quot; class=&quot;no-title&quot; --&gt;
+
+Vis ma vie de front
+===================
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/02/browser-at-war.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+Note: &lt;h2&gt;Cross browser&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1331 specifications (source [W3C](http://www.w3.org/TR/#w3c_all))&lt;/li&gt;
+&lt;li&gt;multiples implémentations&lt;/li&gt;
+&lt;li&gt;Guerre des implémentations&lt;/li&gt;
+&lt;/ul&gt;
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/02/multiple-devices.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+&lt;p class=&quot;alert warn is-big fragment&quot;&gt;Il est indispensable de tester.&lt;/p&gt;
+
+Note: &lt;h2&gt;Equipements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;multiples systèmes et formats (appareils)&lt;/li&gt;
+&lt;/ul&gt;
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/02/security.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+&lt;p class=&quot;alert warn is-big fragment&quot;&gt;Dans le HTML, attention à bien &quot;html_encode&quot; les variables venant de l&#x27;utilisateur.&lt;/p&gt;
+
+Note: &lt;h2&gt;Sécurité&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sécurité des API interrogées (authentification, fin de session, CORS)&lt;/li&gt;
+&lt;li&gt;cross-site scripting (XSS)&lt;/li&gt;
+&lt;li&gt;Content Security Policy (CSP)&lt;/li&gt;
+&lt;/ul&gt;
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/02/network.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+&lt;p class=&quot;alert warn is-big fragment&quot;&gt;Il est indispensable d&#x27;optimiser ses fichiers statiques&lt;/p&gt;
+
+Note: Le réseau
+
+&lt;ul&gt;
+&lt;li&gt;mobile: 57% d&#x27;abandon après 3 secondes (source : [strangeloop](http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/website-abandonment-happens-after-3-seconds/))&lt;/li&gt;
+&lt;li&gt;Amazon: 1% revenue increase for every 100ms of improvement (source :
+[Amazon](https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt))&lt;/li&gt;
+&lt;/ul&gt;
+
+---
+
+## Contraintes du navigateur
+
+* 5 requêtes en parallèle par domaine ;
+* Chargement du JS bloquant ;
+* reflow + repaint ;
+* asynchrone
+
+Note: &lt;h2&gt;Reflow&lt;/h2&gt;
+
+&lt;a href=&quot;http://stackoverflow.com/questions/2549296/whats-the-difference-between-reflow-and-repaint&quot;&gt;Reflow Vs Repaint&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;reflow: impact on layout&lt;/li&gt;
+&lt;li&gt;repaint: impact rendering&lt;/li&gt;
+&lt;/ul&gt;
+
+---
+
+## Javascript
+
+* 1 seul fichier ;
+* En bas de page.
+
+---
+
+## CSS, images
+
+* Charger les CSS tôt pour éviter le reflow ;
+* Bonne gestion du cache HTTP.
+
+---
+
+## Un CDN en production
+
+* distribué
+* autre domaine
+* gestion du cache
+* utiliser les ressources du serveur d&#x27;application pour l&#x27;application
+
+&lt;p class=&quot;alert warn fragment&quot;&gt;Attention au chemin des assets dans le html.&lt;/p&gt;
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+&lt;!-- .slide: data-background=&quot;images/03/environnement.jpg&quot; data-background-size=&quot;100% auto&quot; class=&quot;no-title&quot; --&gt;
+
+Environnement
+=============
+
+Note: &lt;h2&gt;Environnement&lt;/h2&gt;
+
+---
+
+## Le workflow
+
+* Tests unitaires pour le métier ;
+* Rechargement de page pour le visuel.
+
+Note: Le retour doit être rapide
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/02/troll-blank.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+&lt;img  src=&quot;images/02/eclipse_progress.gif&quot; /&gt;
+
+Note: Le retour doit être rapide, attendre que les fichiers soient republiés n&#x27;est pas
+une option.
+
+Un **éditeur** et la **ligne de commande**.
+
+---
+
+## Proxy de développement
+
+&lt;p class=&quot;alert warn fragment&quot;&gt;Attention à bien tenir compte du proxy dans les générations d&#x27;URL (redirect, liens...)&lt;/p&gt;
+
+Note: Utiliser un proxy NodeJs en développement est simple et efficace.
+
+---
+
+&lt;!-- .slide: class=&quot;no-title&quot; --&gt;
+
+## Éditeurs
+
+&lt;a href=&quot;http://www.vim.org/&quot; style=&quot;background-image:url(images/03/vim_logo.gif);background-size:100% auto;&quot; class=&quot;editor-logo hide-text&quot;&gt;Vim&lt;/a&gt;
+&lt;a href=&quot;http://www.sublimetext.com/&quot; style=&quot;background-image:url(images/03/sublime_text_icon.png);background-size:auto 80%;&quot; class=&quot;editor-logo hide-text&quot;&gt;Sublime Text&lt;/a&gt;
+&lt;a href=&quot;http://brackets.io/&quot; style=&quot;background-image:url(images/03/logo-brackets.png);background-size:100% auto;&quot; class=&quot;editor-logo hide-text&quot;&gt;Backets&lt;/a&gt;
+&lt;a href=&quot;https://atom.io/&quot; style=&quot;background-image:url(images/03/logo-atom.png);background-size:100% auto;&quot; class=&quot;editor-logo hide-text&quot;&gt;ATOM&lt;/a&gt;
+&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/developertools/revolutions2013/&quot;
+    style=&quot;background-image:url(images/03/logo-google-developers.png);background-size:100% auto;&quot;
+    class=&quot;editor-logo is-wide&quot;&gt;Chrome Workspace&lt;/a&gt;
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/yo-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;right center&quot; --&gt;
+
+## Yeoman
+
+``` sh
+$ npm install -g yeoman
+$ npm install -g generator-webapp
+$ yo webapp
+```
+
+&lt;p class=&quot;fragment&quot;&gt;
+&lt;a href=&quot;http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254&quot;&gt;Building Apps With the Yeoman Workflow&lt;/a&gt;
+&lt;/p&gt;
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/03/troll-windows.jpg&quot; data-background-size=&quot;auto 100%&quot; class=&quot;no-title&quot; --&gt;
+
+## Ligne de commande sous windows
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/npm-logo.png&quot; data-background-size=&quot;auto 30%&quot; data-background-position=&quot;center 10%&quot; class=&quot;no-title&quot; --&gt;
+
+## npm
+
+package.json
+
+```
+$ npm install
+```
+
+Note: Doit rappeler maven :)
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/bower-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;left center&quot; --&gt;
+
+## bower
+
+bower.json
+
+```
+$ bower install
+```
+
+* installe des dépôts git
+* exposé en mode dev, compilé en release
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/03/troll-svn.jpg&quot; data-background-size=&quot;auto 100%&quot; class=&quot;no-title&quot; --&gt;
+
+## SVN
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/grunt-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;left center&quot; --&gt;
+
+## grunt
+
+``` sh
+$ grunt --help
+$ grunt default
+```
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/grunt-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;left center&quot; --&gt;
+
+## Gruntfile.js
+
+``` javascript
+module.exports = function(grunt) {
+
+    var concat = {
+        dist: {
+            src: [&#x27;src/**/*.js&#x27;],
+            dest: &#x27;dist/&lt;%= pkg.name %&gt;.js&#x27;
+        }
+    };
+
+    grunt.initConfig({
+        pkg: grunt.file.readJSON(&#x27;package.json&#x27;),
+        concat: concat
+    });
+    grunt.loadNpmTasks(&#x27;grunt-contrib-concat&#x27;);
+    grunt.registerTask(&#x27;default&#x27;, [&#x27;concat&#x27;]);
+};
+```
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/grunt-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;left center&quot; --&gt;
+
+## Gruntfile.js
+
+``` javascript
+    var concat = {
+        options: {
+            separator: &#x27;;&#x27;
+        },
+
+        dist: {
+            src: [&#x27;src/**/*.js&#x27;],
+            dest: &#x27;dist/&lt;%= pkg.name %&gt;.js&#x27;
+        }
+
+    };
+```
+
+&lt;p class=&quot;alert info fragment&quot;&gt;ANT configuré en JSON&lt;/p&gt;
+
+Note: Pas forcément plus lisible que le XML, mais plus simple à écrire.
+
+---
+
+&lt;!-- .slide: data-background-image=&quot;images/03/grunt-logo.png&quot; data-background-size=&quot;auto 70%&quot; data-background-position=&quot;left center&quot; --&gt;
+
+## Démarrer avec Grunt
+
+* [Getting started](http://gruntjs.com/getting-started)
+* [Your first GruntJS plugin](http://javascriptplayground.com/blog/2014/01/creating-your-first-grunt-plugin/)
+* [Supercharging your Gruntfile](http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/)
+
+
+---
+
+## Tâches existantes
+
+* [officielles](https://github.com/gruntjs/grunt-contrib)
+* [toutes](http://gruntjs.com/plugins)
+
+---
+
+## watchers
+
+Note: Recompile en permanence
+
+---
+
+## Alternatives
+
+&lt;a href=&quot;http://gulpjs.com/&quot; style=&quot;background-image:url(images/03/logo-gulp.png);background-size:auto 100%;&quot; class=&quot;editor-logo hide-text&quot;&gt;Gulp&lt;/a&gt;
+&lt;a href=&quot;http://brunch.io/&quot; style=&quot;background-image:url(images/03/logo-brunch.png);background-size:auto 70%;&quot; class=&quot;editor-logo hide-text&quot;&gt;Brunch&lt;/a&gt;
+&lt;a href=&quot;https://github.com/broccolijs/broccoli&quot; style=&quot;background-image:url(images/03/logo-broccoli.png);background-size:auto 100%; width: 100%&quot; class=&quot;editor-logo hide-text&quot;&gt;Broccoli&lt;/a&gt;
+
+
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+&lt;!-- .slide: data-background=&quot;images/04/unit_tests.jpg&quot; data-background-size=&quot;100% auto&quot; --&gt;
+
+Tests unitaires
+===============
+
+---
+
+## Assertions
+
+* [Chai](http://chaijs.com/)
+* [should](https://github.com/visionmedia/should.js/)
+* NodeJS assert
+
+---
+
+## Runner
+
+* [Mocha](http://visionmedia.github.io/mocha/)
+* [Jasmine](http://jasmine.github.io/)
+
+---
+
+## Mock
+
+* [Sinon.JS](http://sinonjs.org/)
+
+---
+
+## Cross browser runner
+
+* [Karma](http://karma-runner.github.io/)
+* [browserling](https://browserling.com/) et [testling](https://ci.testling.com/)
+* [Yeti](http://yeti.cx/)
+
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+&lt;!-- .slide: data-background=&quot;images/05/tests-fonctionnels.jpg&quot; data-background-size=&quot;100% auto&quot; class=&quot;no-title&quot; --&gt;
+
+Tests fonctionnels
+=============
+
+Note: &lt;h2&gt;Tests fonctionnels&lt;/h2&gt;
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/05/casperjs-logo.png&quot; data-background-size=&quot;auto 80%&quot; data-background-position=&quot;right center&quot; data-background-color=&quot;#333&quot; class=&quot;text-white&quot; --&gt;
+
+## CasperJS
+
+---
+
+&lt;!-- .slide: data-background=&quot;images/05/selenium-logo.png&quot; data-background-size=&quot;auto 80%&quot; data-background-position=&quot;center center&quot; class=&quot;no-title&quot; --&gt;
+
+## Selenium
+
+---
+
+## Régression visuelle
+
+&lt;img src=&quot;images/05/phantomcss.png&quot; /&gt;
+
+* [PhantomCSS](https://github.com/Huddle/PhantomCSS)
+* [Viff](https://github.com/winsonwq/viff)
+* [About CSS Regression Testing](http://tldr.huddle.com/blog/css-testing/)
+
+---
+
+&lt;p class=&quot;alert tip is-big&quot;&gt;
+Le serveur peut être nécessaire pour les tests, pensez au provisionning.
+&lt;/p&gt;
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+&lt;!-- .slide: data-background=&quot;images/06/tools.jpg&quot; data-background-size=&quot;auto 100%&quot; data-background-position=&quot;center center&quot; class=&quot;no-title&quot; --&gt;
+
+Intégrer dans vos outils
+========================
+
+Note: &lt;h2&gt;Intégrer dans vos outils&lt;/h2&gt;
+
+---
+
+## README
+
+---
+
+* [Intégrer dans Maven](http://addyosmani.com/blog/making-maven-grunt/)
+* [Intégrer dans Graddle](http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle/)
+
+---
+
+## Scripts
+
+* `bin/install`
+* `bin/start`
+* `bin/stop`
+* `bin/tests`
+* `bin/release`
+
+---
+
+## Selenium As A Service
+
+&lt;a href=&quot;http://www.browserstack.com/&quot; style=&quot;background-image: url(images/05/browserstack-logo.png);background-size: 80% auto; background-color:#372E27;&quot; class=&quot;editor-logo hide-text&quot;&gt;BrowserStack&lt;/a&gt;
+&lt;a href=&quot;https://saucelabs.com/&quot; style=&quot;background-image: url(images/05/sauce-labs-logo.png);background-size: 100% auto;&quot; class=&quot;editor-logo hide-text&quot;&gt;SauceLabs&lt;/a&gt;
+
+</script></section>
+<section data-markdown data-separator="^\n---+\n---+\n$" data-vertical="^\n---+\n$" data-notes="^Note:" data-charset="utf-8"><script type="text/template">
+Merci
+=====
+
+---
+---
+
+Questions ?
+===========
+
+</script></section>
             </div> <!-- End of .slides -->
 
         </div> <!-- end of #reveal -->
