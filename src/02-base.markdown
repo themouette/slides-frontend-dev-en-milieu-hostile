@@ -5,68 +5,86 @@ Vis ma vie de front
 
 ---
 
-## Cross browser
+<!-- .slide: data-background="images/02/browser-at-war.jpg" data-background-size="100% auto" -->
 
-* 1331 specifications (source [W3C](http://www.w3.org/TR/#w3c_all))
-* multiples implémentations
-* multiples systèmes et formats (appareils)
-
----
-
-## Note sur le réseau
-
-* mobile: 57% d'abandon après 3 secondes (source : [strangeloop](http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/website-abandonment-happens-after-3-seconds/))
-* Amazon: 1% revenue increase for every 100ms of improvement (source :
-[Amazon](https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt))
-
-<p class="alert tip fragment">Il est indispensable d'optimiser ses fichiers statiques</p>
+Note: <h2>Cross browser</h2>
+<ul>
+<li>1331 specifications (source [W3C](http://www.w3.org/TR/#w3c_all))</li>
+<li>multiples implémentations</li>
+<li>Guerre des implémentations</li>
+</ul>
 
 ---
 
-## contraintes du navigateur
+<!-- .slide: data-background="images/02/multiple-devices.jpg" data-background-size="100% auto" -->
 
-* 5 requêtes en // par domaine
-* Chargement du JS bloquant
-* reflow
-* latence réseau
+<p class="alert warn is-big fragment">Il est indispensable de tester.</p>
+
+Note: <h2>Equipements</h2>
+
+<ul>
+<li>multiples systèmes et formats (appareils)</li>
+</ul>
+
+---
+
+<!-- .slide: data-background="images/02/security.jpg" data-background-size="100% auto" -->
+
+<p class="alert warn is-big fragment">Dans le HTML, attention à bien "html_encode" les variables venant de l'utilisateur.</p>
+
+Note: <h2>Sécurité</h2>
+
+<ul>
+<li>Sécurité des API interrogées (authentification, fin de session, CORS)</li>
+<li>cross-site scripting (XSS)</li>
+<li>Content Security Policy (CSP)</li>
+</ul>
+
+---
+
+<!-- .slide: data-background="images/02/network.jpg" data-background-size="100% auto" -->
+
+<p class="alert warn is-big fragment">Il est indispensable d'optimiser ses fichiers statiques</p>
+
+Note: Le réseau
+
+<ul>
+<li>mobile: 57% d'abandon après 3 secondes (source : [strangeloop](http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/website-abandonment-happens-after-3-seconds/))</li>
+<li>Amazon: 1% revenue increase for every 100ms of improvement (source :
+[Amazon](https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt))</li>
+</ul>
+
+---
+
+## Contraintes du navigateur
+
+* 5 requêtes en parallèle par domaine ;
+* Chargement du JS bloquant ;
+* reflow + repaint ;
+* asynchrone
+
+Note: <h2>Reflow</h2>
+
+<a href="http://stackoverflow.com/questions/2549296/whats-the-difference-between-reflow-and-repaint">Reflow Vs Repaint</a>
+
+<ul>
+<li>reflow: impact on layout</li>
+<li>repaint: impact rendering</li>
+</ul>
 
 ---
 
 ## Javascript
 
-* 1 seul fichier
-* En bas de page pour que la page s'affiche vite
+* 1 seul fichier ;
+* En bas de page.
 
 ---
 
 ## CSS, images
 
-* Load CSS early to avoid reflow
-* use cache
-
----
-
-## Le workflow
-
-* tests unitaires pour le métier
-* reload pour le visuel
-
-<img class="fragment" src="images/02/eclipse_progress.gif" />
-
-<p class="alert warn fragment">
-Le retour doit être rapide, attendre que les fichiers soient republiés n'est pas
-une option.
-</p>
-
----
-
-## Derrière un proxy en dévloppement
-
-<p class="alert info">
-Utiliser un proxy NodeJs en développement est simple et efficace.
-</p>
-
-<p class="alert warn fragment">Attention à bien tenir compte du proxy dans les générations d'URL (redirect, liens...)</p>
+* Charger les CSS tôt pour éviter le reflow ;
+* Bonne gestion du cache HTTP.
 
 ---
 

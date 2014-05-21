@@ -7,25 +7,28 @@ Tests unitaires
 
 ## Assertions
 
-Chai, assert, should...
+* [Chai](http://chaijs.com/)
+* [should](https://github.com/visionmedia/should.js/)
+* NodeJS assert
 
 ---
 
 ## Runner
 
-Mocha, Jasmine
+* [Mocha](http://visionmedia.github.io/mocha/)
+* [Jasmine](http://jasmine.github.io/)
+
+---
+
+## Mock
+
+* [Sinon.JS](http://sinonjs.org/)
 
 ---
 
 ## Cross browser runner
 
-Karma, testling
+* [Karma](http://karma-runner.github.io/)
+* [browserling](https://browserling.com/) et [testling](https://ci.testling.com/)
+* [Yeti](http://yeti.cx/)
 
-
----
-
-## Tester avec les modules
-
-* requireJS (bocoup)
-* Common JS compile test files
-* ES6 transpile test files
