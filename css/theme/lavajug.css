@@ -151,12 +151,22 @@ body {
 .reveal .alert {
   padding: 15px;
   margin: 20px 0;
-  border: 1px solid transparent;
-  border-radius: 4px; }
+  border: 5px solid transparent;
+  border-radius: 15px; }
   .reveal .alert:before {
     font-family: 'FontAwesome';
     margin-right: 10px;
     float: left; }
+  .reveal .alert.is-big {
+    padding: 45px 15px;
+    border-width: 5px;
+    font-size: 1.7em; }
+    .reveal .alert.is-big:before {
+      float: none;
+      margin-bottom: 25px;
+      text-align: center;
+      display: block;
+      font-size: 1.7em; }
 
 .reveal .error {
   color: #a94442;
@@ -193,6 +203,24 @@ body {
 .reveal .article:before, .reveal .link:before {
   content: "\f0c1"; }
 
+.editor-logo {
+  display: block;
+  width: 45%;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  background: no-repeat center center; }
+  .editor-logo:nth-child(2n+1) {
+    margin-right: 10px; }
+  .editor-logo.is-wide {
+    margin-right: 0;
+    width: auto; }
+  .editor-logo.hide-text {
+    text-indent: -99999px; }
+  .editor-logo.show-text {
+    text-indent: 0px; }
+
 #presentation-location {
   float: left;
   display: block; }
@@ -210,3 +238,6 @@ body {
 
 .no-content * {
   display: none; }
+
+.reveal .text-white h1, .reveal .text-white h2, .reveal .text-white h3, .reveal .text-white h4, .reveal .text-white h5, .reveal .text-white h6, .reveal .text-white p, .reveal .text-white blockquote {
+  color: #fff; }
