@@ -37,10 +37,11 @@ module.exports = function (grunt) {
 
         var sectionAttributes = 'data-separator="^\\n---+\\n---+\\n$" data-vertical="^\\n---+\\n$" data-notes="^Note:" data-charset="utf-8"';
         var sectionTpl = expand
-            ? '<section data-markdown <%= section_attributes %>><script type="text/template">\n<%- content %>\n</script></section>'
-            : '<section data-markdown="<%= filepath %>" <%= section_attributes %>></section>';
+            ? '<section data-markdown {%= section_attributes %}><script type="text/template">\n{%= print(grunt.file.read(filepath)) %}\n</script></section>'
+            : '<section data-markdown="{%= filepath %}" {%= section_attributes %}></section>';
 
         var indexTpl = grunt.file.read(options.template);
+        grunt.template.addDelimiters('{% %}', '{%', '%}');
 
         this.files.forEach(function (file) {
 
@@ -62,9 +63,9 @@ module.exports = function (grunt) {
                     return grunt.template.process(sectionTpl, {
                         data: {
                             section_attributes: sectionAttributes,
-                            filepath: filepath,
-                            content: grunt.file.read(filepath)
-                        }
+                            filepath: filepath
+                        },
+                        delimiters: '{% %}'
                     });
                 })
                 // join all sections into one string
