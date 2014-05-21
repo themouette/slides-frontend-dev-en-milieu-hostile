@@ -37,8 +37,8 @@ module.exports = function (grunt) {
 
         var sectionAttributes = 'data-separator="^\\n---+\\n---+\\n$" data-vertical="^\\n---+\\n$" data-notes="^Note:" data-charset="utf-8"';
         var sectionTpl = expand
-            ? '<section data-markdown {%= section_attributes %}><script type="text/template">\n{%= print(grunt.file.read(filepath)) %}\n</script></section>'
-            : '<section data-markdown="{%= filepath %}" {%= section_attributes %}></section>';
+            ? '<section data-markdown <%= section_attributes %>><script type="text/template">\n%%CONTENT%%\n</script></section>'
+            : '<section data-markdown="<%= filepath %>" <%= section_attributes %>></section>';
 
         var indexTpl = grunt.file.read(options.template);
         grunt.template.addDelimiters('{% %}', '{%', '%}');
@@ -60,13 +60,10 @@ module.exports = function (grunt) {
                 })
                 // Convert to `<section>` elements
                 .map(function convertFileToSection (filepath) {
-                    return grunt.template.process(sectionTpl, {
-                        data: {
+                    return _.template(sectionTpl, {
                             section_attributes: sectionAttributes,
                             filepath: filepath
-                        },
-                        delimiters: '{% %}'
-                    });
+                    }).replace('%%CONTENT%%', grunt.file.read(filepath));
                 })
                 // join all sections into one string
                 .join("\n");
@@ -75,10 +72,11 @@ module.exports = function (grunt) {
             // Access to grunt is available too.
             var tplData = {
                 options: options,
-                sections: sections};
+                sections: sections,
+                grunt: grunt};
 
             // process template
-            var content = grunt.template.process(indexTpl, {data: tplData});
+            var content = _.template(indexTpl, tplData);
             // write output file
             grunt.file.write(file.dest, content);
             grunt.log.writeln('File "' + file.dest + '" created.');
