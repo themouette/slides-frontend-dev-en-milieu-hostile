@@ -1,7 +1,9 @@
-<!-- .slide: data-background="images/04/unit_tests.jpg" data-background-size="100% auto" -->
+<!-- .slide: data-background="images/04/unit_tests.jpg" data-background-size="100% auto" class="no-title" -->
 
 Tests unitaires
 ===============
+
+Note: <h2>Tests unitaires</h2>
 
 ---
 
