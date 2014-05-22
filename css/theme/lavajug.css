@@ -241,3 +241,12 @@ body {
 
 .reveal .text-white h1, .reveal .text-white h2, .reveal .text-white h3, .reveal .text-white h4, .reveal .text-white h5, .reveal .text-white h6, .reveal .text-white p, .reveal .text-white blockquote {
   color: #fff; }
+
+.reveal .cover h1 {
+  font-size: 1.77em; }
+.reveal .cover img {
+  box-shadow: none;
+  border: none;
+  height: 300px;
+  margin: 80px auto;
+  display: block; }
