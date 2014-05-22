@@ -30,10 +30,10 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$mainColor: #A7A9AC;
-$headingColor: #00A2E0;
-$backgroundColor: #fafafa;
-$linkColor: #FC7022;
+$mainColor: #6f6f6f;
+$headingColor: #5d5d5a;
+$backgroundColor: #fff;
+$linkColor: #f2c80a;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(79, 64, 28, 0.99);
 $headingTextShadow: -2px 4px 0 rgba(0,0,0,0.3), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
@@ -45,7 +45,8 @@ $date: "22 mai 2014";
 
 // Background generator
 @mixin bodyBackground() {
-    background: $backgroundColor;
+    background: url("../../images/background.png") repeat-x scroll right bottom $backgroundColor;
+    border-top: 5px solid $linkColor;
 	//@include radial-gradient( #e5e5e7, rgba(255,255,255,1) );
 }
 
