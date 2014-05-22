@@ -54,3 +54,16 @@
         }
     }
 }
+
+.reveal .cover {
+    h1 {
+        font-size: 1.77em;
+    }
+    img {
+        box-shadow: none;
+        border: none;
+        height: 300px;
+        margin: 80px auto;
+        display: block;
+    }
+}

@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                 // cover slide image url.
                 // This image is inserted between title and credits.
                 // example value 'img/jslogo.jpg'
-                cover: null
+                cover: 'images/cover.png'
             }
         },
         connect: {
