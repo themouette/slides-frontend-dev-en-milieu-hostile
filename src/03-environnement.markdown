@@ -59,7 +59,7 @@ $ npm install -g generator-webapp
 $ yo webapp
 ```
 
-<p class="fragment">
+<p class="alert is-big">
 <a href="http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254">Building Apps With the Yeoman Workflow</a>
 </p>
 

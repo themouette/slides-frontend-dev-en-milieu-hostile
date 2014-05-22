@@ -23,10 +23,3 @@ Note: <h2>Intégrer dans vos outils</h2>
 * `bin/stop`
 * `bin/tests`
 * `bin/release`
-
----
-
-## Selenium As A Service
-
-<a href="http://www.browserstack.com/" style="background-image: url(images/05/browserstack-logo.png);background-size: 80% auto; background-color:#372E27;" class="editor-logo hide-text">BrowserStack</a>
-<a href="https://saucelabs.com/" style="background-image: url(images/05/sauce-labs-logo.png);background-size: 100% auto;" class="editor-logo hide-text">SauceLabs</a>
