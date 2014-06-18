@@ -1,4 +1,4 @@
-## Define: Font End Developer
+## Define: Front End Developer
 
 Note: <h2>Qui est-il ?</h2>
 **Introduire milieu hostile**
